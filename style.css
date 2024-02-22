@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(40, 39, 39);
+}
+
+.heading {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.main-container,
+.button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-container {
+    margin-top: -60px;
+}
+.text-container {
+    background-color: #fff;
+    width: 400px;
+    /* height: 300px; */
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+.text-container h2 {
+    text-align: start;
+    margin: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(69, 68, 68);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-container input {
+    border: 2px solid rgb(94, 17, 17);
+    outline: none;
+    width: 90%;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin: 10px 0 20px 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.button-container button {
+    width: 90%;
+    border: none;
+    background-color: rgb(20, 99, 20);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+#qr-image {
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-bottom: 30px;
+    transition: max-height 2s;
+    max-height: 0px;
+}
+#qr-image.isactive {
+    max-height: 150px;
+}
+.error {
+    animation: shake 0.1s linear;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+        border: 2px solid rgb(224, 18, 18);
+    }
+    25% {
+        transform: translateX(-4px);
+        border: 2px solid rgb(224, 18, 18);
+    }
+    50% {
+        transform: translateX(0);
+        border: 2px solid rgb(224, 18, 18);
+    }
+    75% {
+        transform: translateX(4px);
+        border: 2px solid rgb(224, 18, 18);
+    }
+    100% {
+        transform: translateX(0);
+        border: 2px solid rgb(224, 18, 18);
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .text-container {
+        width: auto;
+    }
+    .text-container h2 {
+        margin: 0 12px;
+    }
+}
